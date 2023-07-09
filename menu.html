@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="cart.css">
+        <link rel="stylesheet" href="https://unpkg.com/boxincons@latest/css/boxicons.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Toasty Restaurant</title>
+    </head>
+<body class="cart">
+    <nav>
+        <input id="nav-toggle" type="checkbox">
+        <div class="logo">
+            <a href="index.html">Toasty<strong>Restaurant</strong></a>
+        </div>
+        <ul class="links">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="menu.html" class="active">MENU</a></li>
+            <li><a href="about.html">ABOUT US</a></li>  
+            <li><a href="#" onclick="alert('Sorry, this webpage is still under development!')">RESERVATION</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <header><div class="shopping">
+              <!-- <img src="image/shopping.svg"> -->
+              <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+              <span class="quantity">0</span>
+          </div></header>
+            <!-- <li><a href="#" onclick="alert('Sorry, this webpage is still under development!')"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a></li> -->
+           
+        </ul>
+        <label for="nav-toggle" class="icon-burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </label>
+    </nav>
+    
+    <div class="cart-container">
+        <!-- <header>
+            <h1>Your Shopping Cart</h1>
+            <div class="shopping">
+                <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                <span class="quantity">0</span>
+            </div>
+        </header> -->
+        <div class="list">
+          
+        </div>
+
+        <!-- <button class="collapsible">Afghanistan</button>
+        <div class="content">
+            <div class="list">
+          
+            </div>
+        </div>
+
+        <button class="collapsible">Afghanistan</button>
+        <div class="content">
+            <div class="list2">
+          
+            </div>
+        </div>
+
+        <button class="collapsible">Afghanistan</button>
+        <div class="content">
+            <div class="list3">
+          
+            </div>
+        </div> -->
+    </div>
+    
+    <div class="card">
+        <h1>Your Cart</h1>
+        <ul class="listCard">
+        </ul>
+        <div class="checkOut">
+            <div class="total">0</div>
+            <div class="closeShopping">Close</div>
+        </div>
+    </div>
+
+    <script>
+        
+
+let openShopping = document.querySelector('.shopping');
+let closeShopping = document.querySelector('.closeShopping');
+let list = document.querySelector('.list');
+let listCard = document.querySelector('.listCard');
+let body = document.querySelector('body');
+let total = document.querySelector('.total');
+let quantity = document.querySelector('.quantity');
+
+openShopping.addEventListener('click', ()=>{
+    body.classList.add('active');
+})
+closeShopping.addEventListener('click', ()=>{
+    body.classList.remove('active');
+})
+ rand = 'R'
+
+let products = [
+    {
+        id: 1,
+        name: 'Pizza',
+        image: 'food.jpg',
+        price: 199.99
+    },
+    {
+        id: 2,
+        name: 'Burger',
+        image: 'food2.jpg',
+        price: 59.99
+    },
+    {
+        id: 3,
+        name: 'Ceaser Salad',
+        image: 'food3.jpg',
+        price: 39.99
+    },
+    {
+        id: 4,
+        name: 'Pad Thai',
+        image: 'food4.jpg',
+        price: 89.99
+    },
+    {
+        id: 5,
+        name: 'Tacos',
+        image: 'food5.jpg',
+        price: 129.99
+    },
+    {
+        id: 6,
+        name: 'Fried Rice',
+        image: 'food6.jpg',
+        price: 89.99
+    },
+    {
+        id: 7,
+        name: 'Chips',
+        image: 'food7.jpg',
+        price: 39.99
+    },
+    {
+        id: 8,
+        name: 'Chicken Strips',
+        image: 'food8.jpg',
+        price: 49.99
+    },
+    {
+        id: 9,
+        name: 'Coffee',
+        image: 'drink.jpg',
+        price: 34.99
+    },
+    {
+        id: 10,
+        name: 'Tea',
+        image: 'drink2.jpg',
+        price: 24.99
+    },
+    {
+        id: 11,
+        name: 'Hot Chocolate',
+        image: 'drink3.jpg',
+        price: 34.99
+    },
+    {
+        id: 12,
+        name: 'Cold Drink',
+        image: 'drink4.jpg',
+        price: 21.99
+    },
+    {
+        id: 13,
+        name: 'Ice Tea',
+        image: 'drink5.jpg',
+        price: 24.99
+    },
+    {
+        id: 14,
+        name: 'Lemonade',
+        image: 'drink6.jpg',
+        price:  24.99
+    },{
+        id: 15,
+        name: 'Cheese Cake',
+        image: 'dessert.jpg',
+        price:  29.99
+    },
+    {
+        id: 16,
+        name: 'Chocolate Cake',
+        image: 'drink2.jpg',
+        price:  34.99
+    },
+    {
+        id: 17,
+        name: 'Ice Cream',
+        image: 'dessert3.jpg',
+        price:  29.99
+    },
+    {
+        id: 18,
+        name: 'Apple Pie',
+        image: 'dessert4.jpg',
+        price:  34.99
+    },
+    {
+        id: 19,
+        name: 'Creme Brulee',
+        image: 'dessert5.jpg',
+        price: 39.99
+    },
+    {
+        id: 20,
+        name: 'Tiramisu',
+        image: 'dessert6.jpg',
+        price: 39.99
+    },
+
+];
+let listCards  = [];
+function initApp(){
+    products.forEach((value, key) =>{
+        let newDiv = document.createElement('div');
+        newDiv.classList.add('item');
+        newDiv.innerHTML = `
+            <img src="image/${value.image}">
+            <div class="title" style="color:#fff;">${value.name}</div>
+            <div class="price" style="color:#fff;">${ rand + value.price.toLocaleString()}</div>
+            <button onclick="addToCard(${key})";
+            border:none; width:60%;">Add To Cart</button>`;
+        list.appendChild(newDiv);
+    })
+}
+initApp();
+function addToCard(key){
+    if(listCards[key] == null){
+        // copy product form list to list card
+        listCards[key] = JSON.parse(JSON.stringify(products[key]));
+        listCards[key].quantity = 1;
+    }
+    reloadCard();
+}
+function reloadCard(){
+    listCard.innerHTML = '';
+    let count = 0;
+    let totalPrice = 0;
+    listCards.forEach((value, key)=>{
+        totalPrice = totalPrice + value.price;
+        count = count + value.quantity;
+        if(value != null){
+            let newDiv = document.createElement('li');
+            newDiv.innerHTML = `
+                <div><img src="image/${value.image}"/></div>
+                <div>${value.name}</div>
+                <div>${rand + value.price.toLocaleString()}</div>
+                <div>
+                    <button onclick="changeQuantity(${key}, ${value.quantity - 1})">-</button>
+                    <div class="count">${value.quantity}</div>
+                    <button onclick="changeQuantity(${key}, ${value.quantity + 1})">+</button>
+                </div>`;
+                listCard.appendChild(newDiv);
+        }
+    })
+    total.innerText = rand + totalPrice.toLocaleString();
+    quantity.innerText = count;
+}
+function changeQuantity(key, quantity){
+    if(quantity == 0){
+        delete listCards[key];
+    }else{
+        listCards[key].quantity = quantity;
+        listCards[key].price = quantity * products[key].price;
+    }
+    reloadCard();
+}
+// // var coll = document.getElementsByClassName("collapsible");
+// // var i;
+
+// // for (i = 0; i < coll.length; i++) {
+// //   coll[i].addEventListener("click", function() {
+// //     this.classList.toggle("active");
+// //     var content = this.nextElementSibling;
+// //     if (content.style.maxHeight){
+// //       content.style.maxHeight = null;
+// //     } else {
+// //       content.style.maxHeight = content.scrollHeight + "px";
+// //     } 
+// //   });
+// }
+    </script>
+    <section class="end">
+        <div class="last-text">
+            <p>Copyright © 2023. All rights reserved.</p>
+        </div>
+
+        <div class="top">
+            <a href="#"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></a>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
