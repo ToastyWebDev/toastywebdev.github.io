@@ -100,6 +100,10 @@ nav .links a {
 	line-height: 1.8;
 	background-color: #ffffff00;
 }
+nav .links a i {
+  color: white;
+  font-size: 25px;
+}
 nav .links a:hover {
 	display: block;
 	font-weight: bold;
@@ -148,8 +152,7 @@ nav .icon-burger .line {
 
 .intro h3 a {
   color: var(--text-color);
-  font-weight: ;
-  text-decoration: none;
+  /* text-decoration: none; */
 }
 
 .intro p {
@@ -157,8 +160,7 @@ nav .icon-burger .line {
   max-width: 600px;
   padding: 0px;
   text-align: center;
-  letter-spacing: 1;
-  font-weight: ;
+  /* letter-spacing: 1; */
 }
 
 .intro .just-space {
@@ -598,8 +600,7 @@ form textarea{
 
 .wordslide {
     color: #000;
-    padding-top: 70px;
-    font-weight: ;
+    /* padding-top: 70px; */
 }
 
 .wrapper {
@@ -921,6 +922,9 @@ img {
       position: relative;
       text-align: right;
   }
+  header .shopping p {
+    margin-bottom: 0;
+}
   header .shopping span{
       background: coral;
       border-radius: 50%;
@@ -1077,26 +1081,4 @@ img {
       }
   }
 
-  @media(max-width: 4)
-
-  /* .topNav{
-    padding: 10px;
-    justify-content: space-evenly ;
-    display: flex;
-    align-items: center;
-    float: inline-end;
-    background-color: var(--text-color);
-  }
-  .topNav button{
-    background-color: var(--button-color);
-    color: var(--text-color);
-    padding: 5px 20px;
-    cursor: pointer;
-    border: 0;
-    border-radius: 10px;
-    text-align-last: left;
-  }
-  .topNav button:hover{
-    background-color: var(--button-hoverez);
-    transform: scaleX(1.1);
-  } */
+  
