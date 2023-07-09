@@ -165,72 +165,148 @@ $(document).ready(function () {
     localStorage.setItem("account", JSON.stringify(account));
   }
   var food = JSON.parse(localStorage.getItem("food"));
-  if (food === null) {
-    food = [];
-    food = [
-      {
-        id: 0,
-        name: "Grilled Lamb",
-        price: "90000",
-        note: "Grilled lamb leg with onions and some spices",
-        image:
-          "image/foody-upload-api-foody-mobile-suon-10-jpg-181121104208.jpg",
-      },
-      {
-        id: 1,
-        name: "Fried Chicken",
-        price: "50000",
-        note: "Includes 2 wings and 2 chicken drumsticks",
-        image: "image/foody-upload-api-foody-mobile-pizza1-190513160013.jpg",
-      },
-      {
-        id: 2,
-        name: "Roast Duck",
-        price: "130000",
-        note: "One roasted duck yields 2 wings",
-        image: "image/foody-upload-api-foody-mobile-vqy-jpg-180827105031.jpg",
-      },
-      {
-        id: 3,
-        name: "Salmon Sushi",
-        price: "90000",
-        note: "Salmon and some other seafood",
-        image:
-          "image/foody-mobile-10399619_81147453229-527-635863817212109582.jpg",
-      },
-      {
-        id: 4,
-        name: "Rice Vermicelli",
-        price: "50000",
-        note: "Rice vermicelli served with shrimp paste and vegetables",
-        image: "image/foody-upload-api-foody-mobile-10-200317093749.jpg",
-      },
-      {
-        id: 5,
-        name: "Battered Shrimp",
-        price: "60000",
-        note: "Regardless of whether it's winter or summer",
-        image:
-          "image/foody-upload-api-foody-mobile-anh-banner-190829105555.jpg",
-      },
-      {
-        id: 6,
-        name: "King Crab",
-        price: "300000",
-        note: "Regardless of whether it's winter or summer",
-        image:
-          "image/foody-upload-api-foody-mobile-canadian-lobster-res-180711100420.jpg",
-      },
-      {
-        id: 7,
-        name: "BBQ Grilled Goat",
-        price: "25000",
-        note: "Regardless of whether it's winter or summer",
-        image: "image/foody-upload-api-foody-mobile-ddh-200214084711.jpg",
-      },
-    ];
-    localStorage.setItem("food", JSON.stringify(food));
-  }
+if (food === null) {
+  food = [];
+  food = [
+    {
+      id: 0,
+      name: "Grilled Lamb",
+      price: "90000",
+      note: "Grilled lamb leg with onions and spices",
+      image: "image/foody-upload-api-foody-mobile-suon-10-jpg-181121104208.jpg",
+    },
+    {
+      id: 1,
+      name: "Fried Chicken",
+      price: "50000",
+      note: "2 wings and 2 drumsticks",
+      image: "image/foody-upload-api-foody-mobile-pizza1-190513160013.jpg",
+    },
+    {
+      id: 2,
+      name: "Roast Duck",
+      price: "130000",
+      note: "One roasted duck yields 2 wings",
+      image: "image/foody-upload-api-foody-mobile-vqy-jpg-180827105031.jpg",
+    },
+    {
+      id: 3,
+      name: "Salmon Sushi",
+      price: "90000",
+      note: "Salmon and other seafood",
+      image:
+        "image/foody-mobile-10399619_81147453229-527-635863817212109582.jpg",
+    },
+    {
+      id: 4,
+      name: "Rice Vermicelli",
+      price: "50000",
+      note: "With shrimp paste and vegetables",
+      image: "image/foody-upload-api-foody-mobile-10-200317093749.jpg",
+    },
+    {
+      id: 5,
+      name: "Battered Shrimp",
+      price: "60000",
+      note: "Crispy fried shrimp",
+      image: "image/foody-upload-api-foody-mobile-anh-banner-190829105555.jpg",
+    },
+    {
+      id: 6,
+      name: "King Crab",
+      price: "300000",
+      note: "Delicious and succulent crab",
+      image:
+        "image/foody-upload-api-foody-mobile-canadian-lobster-res-180711100420.jpg",
+    },
+    {
+      id: 7,
+      name: "BBQ Grilled Goat",
+      price: "25000",
+      note: "Tender and flavorful goat meat",
+      image: "image/foody-upload-api-foody-mobile-ddh-200214084711.jpg",
+    },
+    {
+      id: 8,
+      name: "Apple Juice",
+      price: "20000",
+      note: "Refreshing juice made from ripe apples",
+      image: "image/apple-juice.jpg",
+    },
+    {
+      id: 9,
+      name: "Bonaqua Water",
+      price: "15000",
+      note: "Still mineral water for hydration",
+      image: "image/bonaqua-water.jpg",
+    },
+    {
+      id: 10,
+      name: "Cappy Apple Juice",
+      price: "25000",
+      note: "Premium apple juice from selected apples",
+      image: "image/cappy-apple-juice.jpg",
+    },
+    {
+      id: 11,
+      name: "Coke",
+      price: "18000",
+      note: "World-famous cola with a caramel flavor",
+      image: "image/coke.jpg",
+    },
+    {
+      id: 12,
+      name: "Coke Zero",
+      price: "18000",
+      note: "Sugar-free variant of Coca-Cola",
+      image: "image/coke-zero.jpg",
+    },
+    {
+      id: 13,
+      name: "Creme Soda",
+      price: "18000",
+      note: "Beloved green cream soda with a creamy flavor",
+      image: "image/creme-soda.jpg",
+    },
+    {
+      id: 14,
+      name: "Fanta",
+      price: "18000",
+      note: "Carbonated fruity soft drink",
+      image: "image/fanta.jpg",
+    },
+    {
+      id: 15,
+      name: "Orange Juice",
+      price: "20000",
+      note: "Zesty and refreshing juice from squeezed oranges",
+      image: "image/orange-juice.jpg",
+    },
+    {
+      id: 16,
+      name: "Sprite",
+      price: "18000",
+      note: "Lemon-lime flavored soda for a crisp taste",
+      image: "image/sprite.jpg",
+    },
+    {
+      id: 17,
+      name: "Powerade",
+      price: "25000",
+      note: "Isotonic sports drink for hydration and electrolytes",
+      image: "image/powerade.jpg",
+    },
+    {
+      id: 18,
+      name: "Stoney Zero",
+      price: "18000",
+      note: "Sugar-free fiery ginger beer",
+      image: "image/stoney-zero.jpg",
+    },
+  ];
+  localStorage.setItem("food", JSON.stringify(food));
+}
+
 
   // var orderFood=[];
   //
