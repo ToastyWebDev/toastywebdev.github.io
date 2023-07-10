@@ -78,6 +78,25 @@ $(document).ready(function () {
   function sacom() {
     bank = "Nhận hàng thanh toán";
   }
+//
+  function FNB() {
+    bank = "FNB";
+  }
+  function Absa() {
+    bank = "Absa";
+  }
+  function Nedbank() {
+    bank = "Nedbank";
+  }
+  function Standard() {
+    bank = "Standard Bank";
+  }
+  function Capitec() {
+    bank = "Capitec";
+  }
+  function Cash() {
+    bank = "Cash on Delivery";
+  }
 
   function management_web() {
     document.getElementById("list_food_home").style.display = "none";
@@ -424,7 +443,7 @@ function Login() {
         total_order += orderFood[i].price_order * orderFood[i].quanlity_order;
       }
     }
-    document.getElementById("total_money").innerHTML = total_order + "đ";
+    document.getElementById("total_money").innerHTML = "R " + total_order;
   }
 
   function upQuality(id_order) {
@@ -622,9 +641,9 @@ function Login() {
           `)" class="cart_input_quanlity mt-2" type="number" value="` +
           orderFood[i].quanlity_order +
           `" name="" min="1" max="20" style=""> </td>
-      <td class="text-center"><p class="mt-2" style="padding:5px;">` +
+      <td class="text-center"><p class="mt-2" style="padding:5px;">R ` +
           orderFood[i].price_order * orderFood[i].quanlity_order +
-          `đ</p></td>
+          `</p></td>
       <td class="text-center"><div onclick="delete_order(` +
           orderFood[i].id_order +
           `)" class="cart_button_delete"><i class="fa fa-trash" aria-hidden="true" style="color: #fb9200;font-size: 180%"></i></div> </td>
