@@ -1,33 +1,61 @@
-$(document).ready(function () {
-    $(".payment_vietinbank").click(function () {
-      $(".payment_vietinbank").css("border", "2px solid #2195f3");
-      $(".payment_donga").css("border", "1px solid #d7d7d7");
-      $(".payment_nama").css("border", "1px solid #d7d7d7");
-      $(".payment_sacom").css("border", "1px solid #d7d7d7");
+  $(document).ready(function () {
+    $(".payment_fnb").click(function () {
+      $(".payment_fnb").css("border", "2px solid #2195f3");
+      $(".payment_cash").css("border", "1px solid #d7d7d7");
+      $(".payment_absa").css("border", "1px solid #d7d7d7");
+      $(".payment_nedbank").css("border", "1px solid #d7d7d7");
+      $(".payment_standard").css("border", "1px solid #d7d7d7");
+      $(".payment_capitec").css("border", "1px solid #d7d7d7");
     });
   });
   $(document).ready(function () {
-    $(".payment_donga").click(function () {
-      $(".payment_donga").css("border", "2px solid #2195f3");
-      $(".payment_vietinbank").css("border", "1px solid #d7d7d7");
-      $(".payment_nama").css("border", "1px solid #d7d7d7");
-      $(".payment_sacom").css("border", "1px solid #d7d7d7");
+    $(".payment_absa").click(function () {
+      $(".payment_absa").css("border", "2px solid #2195f3");
+      $(".payment_fnb").css("border", "1px solid #d7d7d7");
+      $(".payment_cash").css("border", "1px solid #d7d7d7");
+      $(".payment_nedbank").css("border", "1px solid #d7d7d7");
+      $(".payment_standard").css("border", "1px solid #d7d7d7");
+      $(".payment_capitec").css("border", "1px solid #d7d7d7");
     });
   });
   $(document).ready(function () {
-    $(".payment_nama").click(function () {
-      $(".payment_nama").css("border", "2px solid #2195f3");
-      $(".payment_vietinbank").css("border", "1px solid #d7d7d7");
-      $(".payment_donga").css("border", "1px solid #d7d7d7");
-      $(".payment_sacom").css("border", "1px solid #d7d7d7");
+    $(".payment_nedbank").click(function () {
+      $(".payment_nedbank").css("border", "2px solid #2195f3");
+      $(".payment_fnb").css("border", "1px solid #d7d7d7");
+      $(".payment_absa").css("border", "1px solid #d7d7d7");
+      $(".payment_cash").css("border", "1px solid #d7d7d7");
+      $(".payment_standard").css("border", "1px solid #d7d7d7");
+      $(".payment_capitec").css("border", "1px solid #d7d7d7");
     });
   });
   $(document).ready(function () {
-    $(".payment_sacom").click(function () {
-      $(".payment_sacom").css("border", "2px solid #2195f3");
-      $(".payment_vietinbank").css("border", "1px solid #d7d7d7");
-      $(".payment_donga").css("border", "1px solid #d7d7d7");
-      $(".payment_nama").css("border", "1px solid #d7d7d7");
+    $(".payment_standard").click(function () {
+      $(".payment_standard").css("border", "2px solid #2195f3");
+      $(".payment_fnb").css("border", "1px solid #d7d7d7");
+      $(".payment_absa").css("border", "1px solid #d7d7d7");
+      $(".payment_nedbank").css("border", "1px solid #d7d7d7");
+      $(".payment_cash").css("border", "1px solid #d7d7d7");
+      $(".payment_capitec").css("border", "1px solid #d7d7d7");
+    });
+  });
+  $(document).ready(function () {
+    $(".payment_capitec").click(function () {
+      $(".payment_capitec").css("border", "2px solid #2195f3");
+      $(".payment_fnb").css("border", "1px solid #d7d7d7");
+      $(".payment_absa").css("border", "1px solid #d7d7d7");
+      $(".payment_nedbank").css("border", "1px solid #d7d7d7");
+      $(".payment_standard").css("border", "1px solid #d7d7d7");
+      $(".payment_cash").css("border", "1px solid #d7d7d7");
+    });
+  });
+  $(document).ready(function () {
+    $(".payment_cash").click(function () {
+      $(".payment_cash").css("border", "2px solid #2195f3");
+      $(".payment_fnb").css("border", "1px solid #d7d7d7");
+      $(".payment_absa").css("border", "1px solid #d7d7d7");
+      $(".payment_nedbank").css("border", "1px solid #d7d7d7");
+      $(".payment_standard").css("border", "1px solid #d7d7d7");
+      $(".payment_capitec").css("border", "1px solid #d7d7d7");
     });
   });
 
@@ -66,19 +94,6 @@ $(document).ready(function () {
     document.getElementById("checkout_form").style.display = "none";
   }
   var bank;
-  function viettinbank() {
-    bank = "viettinbank";
-  }
-  function donga() {
-    bank = "dongabank";
-  }
-  function nama() {
-    bank = "namabank";
-  }
-  function sacom() {
-    bank = "Nhận hàng thanh toán";
-  }
-//
   function FNB() {
     bank = "FNB";
   }
