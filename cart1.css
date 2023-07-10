@@ -42,8 +42,7 @@ nav ul li a {
     font-family: "Poppins", sans-serif;
 }
 
-a.active,
-a:hover {
+a.active {
     background: #fb9200;
     transition: 0.5s;
     color: #fff;

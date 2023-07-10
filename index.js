@@ -311,8 +311,8 @@ if (food === null) {
   if (checkLogin == -1) {
   } else if (account[checkLogin].level == 0) {
     document.getElementById("statusLogin").innerHTML = "Logged in successfully";
-    document.getElementById("menu_account_login").innerHTML =
-      account[checkLogin].username;
+    document.getElementById("menu_account_login").innerHTML = '<i class="fa fa-user" aria-hidden="true"></i>';
+      // account[checkLogin].username;
     document.getElementById("menu_account_login").style.display = "block";
     document.getElementById("menu_login_button").style.display = "none";
     document.getElementById("hello_user").innerHTML =
@@ -323,12 +323,12 @@ if (food === null) {
     demOrder();
   } else if (account[checkLogin].level == 1) {
     document.getElementById("statusLogin").innerHTML = "Logged in successfully";
-    document.getElementById("menu_account_login").innerHTML =
-      account[checkLogin].username;
+    document.getElementById("menu_account_login").innerHTML = '<i class="fa fa-user" aria-hidden="true"></i>';
+      // account[checkLogin].username;
     document.getElementById("menu_account_login").style.display = "block";
     document.getElementById("menu_login_button").style.display = "none";
     document.getElementById("hello_user").innerHTML =
-      "Hello " + account[checkLogin].username + " !";
+      "Hello " + account[checkLogin].username + "!";
     document.getElementById("menu_logout").style.display = "block";
     document.getElementById("quanlydon").style.display = "block";
     orderprinf();
