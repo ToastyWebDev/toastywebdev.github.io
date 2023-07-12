@@ -25,7 +25,7 @@
 }
 .index{
     max-width: 100%;
-    background-image:url(Toasty4.jpg);
+    background-image:url(image/Toasty4.jpg);
     background-size:cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -318,14 +318,18 @@ nav .icon-burger .line {
     color: #000;
 } */
 
+#top-info{
+  padding-top: 8rem;
+}
 #about{
     width:100%;
-    background-image:url(background-adare-restaurant.jpg);
+    background-image:url(image/background-adare-restaurant.jpg);
     background-size:cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
 }
+
 .about-info{
 	display: flex;
 	text-align: center;
@@ -349,7 +353,7 @@ nav .icon-burger .line {
 /* contact page */
 
 .contact{
-    background-image: url(background-adare-restaurant.jpg) ;
+    background-image: url(image/background-adare-restaurant.jpg) ;
     background-size:cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -711,7 +715,7 @@ img {
   }
 
   #menu-body {
-	background-image: url(background-adare-restaurant.jpg);
+	background-image: url(image/background-adare-restaurant.jpg);
 	background-size: cover;
 	background-position: center;
 	transition: background-image 1s ease-in-out;
@@ -804,31 +808,12 @@ img {
     color: var(--second-color);
     padding: 2% 0;
   }
-  #image1{
-    background-image: url(User-avatar.svg.png);
+  #image1, #image2, #image3, #image4, #image5{
+    background-image: url(image/User-avatar.svg.png);
     background-size: cover;
     background-repeat: no-repeat;
   }
-  #image2{
-    background-image: url(User-avatar.svg.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  #image3{
-    background-image: url(User-avatar.svg.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  #image4{
-    background-image: url(User-avatar.svg.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  #image5{
-    background-image: url(User-avatar.svg.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
+  
   
   @media(max-width: 400px) {
     #about,
