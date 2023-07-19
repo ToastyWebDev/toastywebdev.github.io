@@ -368,6 +368,7 @@ nav .icon-burger .line {
     align-items: center;
     gap: 2.5rem;
     padding: 100px 15% 0;
+    height: 100vh;
 }
 span{
 	color: var(--text-color);
@@ -839,7 +840,6 @@ img {
     .end{
       width: 400px;
     }
-      
     .intro{
       height: 76vh;
       margin: 5% 0 25% 0;
@@ -851,6 +851,12 @@ img {
   .contact{
     max-width: 400px;
   }
+  }
+
+  @media (max-width: 768px){
+    .just-space{
+      padding: 11rem 0;
+    }
   }
   @media (max-width: 600px) {
     .about-us-box {
@@ -865,7 +871,6 @@ img {
         text-align: center;
         padding: 0% 0 100px 0;
       }
-      
     .intro{
       height: 76vh;
       margin: 5% 0 25% 0;
