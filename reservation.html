@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxincons@latest/css/boxicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Toasty Restaurant</title>
+</head>
+<body class="reservation-body">
+    <nav>
+        <input id="nav-toggle" type="checkbox">
+        <div class="logo">
+            <a href="index.html">Toasty<strong>Resturant</strong></a>
+        </div>
+        <ul class="links">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="menu.html">MENU</a></li>
+            <li><a href="#about" class="active">ABOUT US</a></li> 
+            <li><a href="reservation.html">RESERVATION</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li><header><div class="shopping">
+              <!-- <img src="image/shopping.svg"> -->
+              <i class="fa fa-shopping-basket"></i>
+              <span class="quantity">0</span>
+          </div></header></li>
+           
+        </ul>
+        <label for="nav-toggle" class="icon-burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </label>
+    </nav>
+    <section>
+        <div class="extra-space"></div>
+        <div class="reaservation-form">
+            <h2><span>Book your </span>Reservation with Us</h2>
+            <form action="includes/reservation.inc.php" method="post">
+            <input type="text" class="form-control" name="fname" placeholder="First Name" required="required" minlength="2" maxlength="20">
+                    <small class="form-text text-muted"></small>
+            <input type="text" class="form-control" name="lname" placeholder="Last Name" required="required" minlength="2" maxlength="20">
+                    <small class="form-text text-muted"></small>
+            <input type="date" class="form-control" name="date" placeholder="Date" required="required">
+            <select class="form-control" name="Time">
+            <option>12:00 - 16:00</option>
+            <option>16:00 - 20:00</option>
+            <option>20:00 - 00:00</option>
+            </select>
+            <input type="number" class="form-control" min="1" name="num_guests" placeholder="Number of Guests" required="required" minlength="1" maxlength="20">
+                    <small class="form-text text-muted"></small>
+            <input type="telephone" class="form-control" name="tele" placeholder="Telephone" required="required" minlength="6" maxlength="20">
+                    <small class="form-text text-muted"></small>
+            <textarea class="form-control" name="comments" placeholder="Comments" rows="3" maxlength="200"></textarea>
+                    <small class="form-text text-muted"></small>
+            
+        </form>
+        
+        <div class="reservation-checkbox">
+            <input type="checkbox" required="required"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a>
+            <br></br>
+            <a href="register.php"><input type="submit" value="Reservation" class="submit" required></a>
+        </div>
+        </div>
+        
+        
+
+    </section>
+    <section class="end">
+        <div class="last-text">
+            <p>Copyright © 2023. All rights reserved.</p>
+        </div>
+
+        <div class="top">
+            <a href="#"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></a>
+        </div>
+    </section>
+
+    <script src="script.js">
+
+    </script>
+</body>
+</html>
