@@ -1084,7 +1084,7 @@ img {
         background-attachment: fixed;
         background-position: center;
         padding-top: 75px;
-        
+        height: 100vh;
     }
     span{
       color: var(--text-color);
