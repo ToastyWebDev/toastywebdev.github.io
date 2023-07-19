@@ -198,7 +198,7 @@
     ];
     localStorage.setItem("account", JSON.stringify(account));
   }
-  var food = JSON.parse(localStorage.getItem("food"));
+var food = JSON.parse(localStorage.getItem("food"));
 if (food === null) {
   food = [];
   food = [
@@ -992,50 +992,6 @@ function Login() {
     document.getElementById("support_send").innerHTML =
       "Feedback submitted successfully";
   }
-
-  function listFood() {
-  document.getElementById("prinf_food").innerHTML = "";
-  var food = JSON.parse(localStorage.getItem("food"));
-  for (let i = 0; i < food.length; i++) {
-    var prinf =
-      `<div class="col-12 col-sm-6 col-md-4 col-lg-3 p-4">
-        <div class="produre_box bg-white shadow-sm">
-          <div class="image_box">
-            <img src="` +
-      food[i].image +
-      `" width="100%" height="100%" style="">
-          </div>
-          <div class="info_box p-3 bg-white">
-            <p class="float-left font-weight-bold mb-0" style="font-size: 115%">` +
-      food[i].name +
-      `</p>
-            <div style="clear: both;"></div>
-            
-            <p style="font-size: 85%;height:auto; padding:3px 0;">` +
-      food[i].note +
-      `</p>
-            <div style="clear: both;"></div>
-            <p style="font-size: 115%; padding: 1px;">` +
-      'R ' +formatPrice(food[i].price) +
-      `</p>
-					<div class="star_box float-left pt-2">
-						<img src="icon_star.svg" width="80%">
-					</div>
-					<div class="order_box float-right">
-						<div onclick="checkorder(` +
-      food[i].id +
-      `)" class="order_button float-right pt-2">
-                <i class="fa fa-plus" aria-hidden="true"></i>
-              </div>
-            </div>
-            <div style="clear: both;"></div>
-          </div>
-        </div>
-      </div>`;
-    document.getElementById("prinf_food").innerHTML += prinf;
-  }
-}
-
 
 function formatPrice(price) {
   // Format price in Rands
