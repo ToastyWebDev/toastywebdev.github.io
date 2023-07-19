@@ -30,30 +30,84 @@
     <title>Toasty Restaurant</title>
 </head>
 <body class="reservation-body">
-    <nav>
-        <input id="nav-toggle" type="checkbox">
-        <div class="logo">
-            <a href="index.html">Toasty<strong>Resturant</strong></a>
+ <nav id="menu">
+    <input id="nav-toggle" type="checkbox" />
+    <div class="logo">
+      <a href="index.html">Toasty<strong>Restaurant</strong></a>
+    </div>
+    <ul class="links">
+      <li><a href="index.html" class="active">HOME</a></li>
+      <li><a href="menu.html">MENU</a></li>
+      <li><a href="about.html">ABOUT US</a></li>
+      <li>
+        <a href="reservation.html">RESERVATION</a>
+      </li>
+      <li><a href="contact.html">CONTACT</a></li>
+      <li>
+        <a id="menu_login_button" data-toggle="modal" data-target=".login">
+          '<i class="fa fa-sign-in" aria-hidden="true"></i>'
+        </a>
+        <a id="menu_account_login" class="menu_account_hide" style="display: none"></a>
+      </li>
+
+      <header>
+        <div data-toggle="modal" data-target=".orderCart" class="shopping">
+          <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+          <span>
+            <p id="order_number">0</p>
+          </span>
         </div>
-        <ul class="links">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="menu.html">MENU</a></li>
-            <li><a href="#about" class="active">ABOUT US</a></li> 
-            <li><a href="reservation.html">RESERVATION</a></li>
-            <li><a href="contact.html">CONTACT</a></li>
-            <li><header><div class="shopping">
-              <!-- <img src="image/shopping.svg"> -->
-              <i class="fa fa-shopping-basket"></i>
-              <span class="quantity">0</span>
-          </div></header></li>
-           
-        </ul>
-        <label for="nav-toggle" class="icon-burger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </label>
-    </nav>
+      </header>
+    </ul>
+    <label for="nav-toggle" class="icon-burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </label>
+    <ul></ul>
+
+    <div id="menu_logout">
+      <div id="menu_header22" class="khung p-3" style="
+            margin: 0 auto;
+            width: 3500px;
+            background: orange;
+            border-radius: 8px;
+            font-family: Helvetica, Arial, sans-serif;
+            padding: 0.5rem;
+            position: absolute;
+            z-index: 999;
+            margin-left: calc(100vw - 400px);
+            margin-top: 55px;
+            display: none;
+          ">
+        <p id="hello_user" class="text-white" style="opacity: 0.9"></p>
+        <div id="quanlydon" class="box p-1" style="height: 35px; display: none">
+          <a href="dashboard.html">
+            <p>
+              <i class="fa fa-list-alt text-white mr-3" aria-hidden="true"></i>Manage
+            </p>
+          </a>
+        </div>
+        <div class="box p-1" data-toggle="modal" data-target=".bd-example-modal-lg22" style="height: 35px">
+          <p>
+            <i class="fa fa-list-alt text-white mr-3" aria-hidden="true"></i>My Orders
+          </p>
+        </div>
+        <div class="box p-1" data-toggle="modal" data-target=".bd-example-modal-sm33" style="height: 35px">
+          <p>
+            <i class="fa fa-key text-white mr-3" aria-hidden="true"></i>Change
+            Password
+          </p>
+        </div>
+
+        <div class="box p-1" style="height: 35px">
+          <p onclick="Logout()">
+            <i class="fa fa-sign-out text-white mr-3" aria-hidden="true"></i>Logout
+          </p>
+        </div>
+      </div>
+    </div>
+  </nav>
     <section>
         <div class="extra-space"></div>
         <div class="reaservation-form">
