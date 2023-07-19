@@ -1151,6 +1151,9 @@ img {
   .reservation-container{
     height: 100vh;
   }
+  .extra-lower{
+    padding: 5rem 0 0 0;
+  }
     
     /* End of Reservations */
 
