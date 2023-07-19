@@ -1070,5 +1070,79 @@ img {
       
       }
   }
+ /* Reservations */ 
+
+    .reservation-body{
+      background-image: url(Reservation.png);
+      background-size:cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        padding-top: 75px;
+    }
+    span{
+      color: var(--text-color);
+    }
+    .reaservation-form h2{
+      font-size: 3rem;
+      line-height: 1;
+    color: var(--button-color);
+    text-align: center;
+    padding-bottom: 30px;
+    }
+    .reaservation-form{
+      position: relative;
+      width: 40%;
+      margin-left:  auto;
+      margin-right: auto;
+      padding: 14px;
+        color: var(--text-color);
+        border: none;
+        outline: none;
+        font-size: 15px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+      
+    }
+    .reaservation-form form{
+      position: relative;
+    }
+    .reaservation-form form input,
+    form textarea{
+      width: 100%;
+      padding: 14px;
+      background: var(--second-bg-color);
+      color: var(--text-color);
+      border: none;
+      outline: none;
+      font-size: 15px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    .reaservation-form textarea{
+      resize: none;
+      height: 240px;
+    }
+    .reaservation-form .submit{
+    display: inline-block;
+    font-size: 16px;
+    background: var(--button-color);
+    color: var(--text-color);
+    width: 160px;
+    transition: all .45s ease;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 14px;
+    }
+    .reaservation-form .submit:hover{
+    background-color: var(--button-hoverez);
+    transform: scale(1.1);
+    cursor: pointer;
+    }
+    
+    /* End of Reservations */
 
   
