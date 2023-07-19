@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="cart1.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxincons@latest/css/boxicons.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    <title>Toasty Restaurant</title>
+</head>
+<body class="reservation-body">
+ <nav id="menu">
+    <input id="nav-toggle" type="checkbox" />
+    <div class="logo">
+      <a href="index.html">Toasty<strong>Restaurant</strong></a>
+    </div>
+    <ul class="links">
+      <li><a href="index.html" class="active">HOME</a></li>
+      <li><a href="menu.html">MENU</a></li>
+      <li><a href="about.html">ABOUT US</a></li>
+      <li>
+        <a href="reservation.html">RESERVATION</a>
+      </li>
+      <li><a href="contact.html">CONTACT</a></li>
+      <li>
+        <a id="menu_login_button" data-toggle="modal" data-target=".login">
+          '<i class="fa fa-sign-in" aria-hidden="true"></i>'
+        </a>
+        <a id="menu_account_login" class="menu_account_hide" style="display: none"></a>
+      </li>
+
+      <header>
+        <div data-toggle="modal" data-target=".orderCart" class="shopping">
+          <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+          <span>
+            <p id="order_number">0</p>
+          </span>
+        </div>
+      </header>
+    </ul>
+    <label for="nav-toggle" class="icon-burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </label>
+    <ul></ul>
+
+    <div id="menu_logout">
+      <div id="menu_header22" class="khung p-3" style="
+            margin: 0 auto;
+            width: 3500px;
+            background: orange;
+            border-radius: 8px;
+            font-family: Helvetica, Arial, sans-serif;
+            padding: 0.5rem;
+            position: absolute;
+            z-index: 999;
+            margin-left: calc(100vw - 400px);
+            margin-top: 55px;
+            display: none;
+          ">
+        <p id="hello_user" class="text-white" style="opacity: 0.9"></p>
+        <div id="quanlydon" class="box p-1" style="height: 35px; display: none">
+          <a href="dashboard.html">
+            <p>
+              <i class="fa fa-list-alt text-white mr-3" aria-hidden="true"></i>Manage
+            </p>
+          </a>
+        </div>
+        <div class="box p-1" data-toggle="modal" data-target=".bd-example-modal-lg22" style="height: 35px">
+          <p>
+            <i class="fa fa-list-alt text-white mr-3" aria-hidden="true"></i>My Orders
+          </p>
+        </div>
+        <div class="box p-1" data-toggle="modal" data-target=".bd-example-modal-sm33" style="height: 35px">
+          <p>
+            <i class="fa fa-key text-white mr-3" aria-hidden="true"></i>Change
+            Password
+          </p>
+        </div>
+
+        <div class="box p-1" style="height: 35px">
+          <p onclick="Logout()">
+            <i class="fa fa-sign-out text-white mr-3" aria-hidden="true"></i>Logout
+          </p>
+        </div>
+      </div>
+    </div>
+  </nav>
+    <section>
+        <div class="extra-space"></div>
+        <div class="reaservation-form">
+            <h2><span>Book your </span>Reservation with Us</h2>
+            <form action="includes/reservation.inc.php" method="post">
+            <input type="text" class="form-control" name="fname" placeholder="First Name" required="required" minlength="2" maxlength="20">
+                    <small class="form-text text-muted"></small>
+            <input type="text" class="form-control" name="lname" placeholder="Last Name" required="required" minlength="2" maxlength="20">
+                    <small class="form-text text-muted"></small>
+            <input type="date" class="form-control" name="date" placeholder="Date" required="required">
+            <select class="form-control" name="Time">
+            <option>12:00 - 16:00</option>
+            <option>16:00 - 20:00</option>
+            <option>20:00 - 00:00</option>
+            </select>
+            <input type="number" class="form-control" min="1" name="num_guests" placeholder="Number of Guests" required="required" minlength="1" maxlength="20">
+                    <small class="form-text text-muted"></small>
+            <input type="telephone" class="form-control" name="tele" placeholder="Telephone" required="required" minlength="6" maxlength="20">
+                    <small class="form-text text-muted"></small>
+            <textarea class="form-control" name="comments" placeholder="Comments" rows="3" maxlength="200"></textarea>
+                    <small class="form-text text-muted"></small>
+            
+        </form>
+        
+        <div class="reservation-checkbox">
+            <input type="checkbox" required="required"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a>
+            <br></br>
+            <a href="register.php"><input type="submit" value="Reservation" class="submit" required></a>
+        </div>
+        </div>
+        
+        
+
+    </section>
+    <section class="end">
+        <div class="last-text">
+            <p>Copyright © 2023. All rights reserved.</p>
+        </div>
+
+        <div class="top">
+            <a href="#"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></a>
+        </div>
+    </section>
+
+    <script src="script.js">
+
+    </script>
+</body>
+</html>
