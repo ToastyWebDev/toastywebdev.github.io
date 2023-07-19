@@ -75,6 +75,11 @@ nav .logo {
 .logo strong{
   font-family: monotype corsiva;
 }
+.logo a:hover{
+	transform: scale(1);
+    color: #fff;
+    text-decoration:none;
+}
 nav .links {
 	float: right;
 	padding: 0;

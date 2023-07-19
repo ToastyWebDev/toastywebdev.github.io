@@ -58,6 +58,8 @@ nav .logo {
 }
 .logo a:hover{
 	transform: scale(1);
+    color: #fff;
+    text-decoration:none;
 }
 nav .links {
 	float: right;

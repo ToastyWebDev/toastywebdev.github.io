@@ -833,6 +833,7 @@ function Login() {
   }
 }
 
+
 function formatPrice(price) {
   // Format price in Rands
   return price.toLocaleString("en-ZA");
