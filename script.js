@@ -1,7 +1,7 @@
 // header functions
 const header = document.querySelector("nav");
-window.addEventListener ("scroll", function() {
-    header.classList.toggle ("sticky", window.scrollY > 100);
+window.addEventListener("scroll", function () {
+  header.classList.toggle("sticky", window.scrollY > 100);
 });
 
 // let menu = document.querySelector('#menu-icon');
@@ -11,25 +11,23 @@ window.addEventListener ("scroll", function() {
 //     navlist.classList.remove('open');
 // };
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   var navToggle = document.getElementById("nav-toggle");
   var navMenu = document.querySelector("nav ul.links");
-  
+
   function hideNavMenu() {
-      navToggle.checked = false;
+    navToggle.checked = false;
   }
   function onScroll() {
-      hideNavMenu();
+    hideNavMenu();
   }
   function onClick() {
-      hideNavMenu();
+    hideNavMenu();
   }
   window.addEventListener("scroll", onScroll);
   navMenu.addEventListener("click", onClick);
 });
 
-function showPop(){
-  alert("Click Menu to view your cart !!")
+function showPop() {
+  alert("Click Menu to view your cart !!");
 }
-
-

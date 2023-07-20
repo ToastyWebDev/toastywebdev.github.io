@@ -1,75 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="cart1.css">
-    <link rel="stylesheet" href="https://unpkg.com/boxincons@latest/css/boxicons.min.css" />
+    <link rel="stylesheet" href="cart1.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxincons@latest/css/boxicons.min.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
     <title>Toasty Restaurant</title>
-</head>
+  </head>
 
-<body onload="onloadAll()">
+  <body onload="onloadAll()">
     <nav id="menu">
-        <input id="nav-toggle" type="checkbox" />
-        <div class="logo">
-            <a href="index.html">Toasty<strong>Restaurant</strong></a>
-        </div>
-        <ul class="links">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="menu.html">MENU</a></li>
-            <li><a href="about.html">ABOUT US</a></li>
-            <li>
-                <a href="reservation.html">RESERVATION</a>
-            </li>
-            <li><a href="contact.html" class="active">CONTACT</a></li>
-            <li>
-                <a id="menu_login_button" data-toggle="modal" data-target=".login">
-                    '<i class="fa fa-sign-in" aria-hidden="true"></i>'
-                </a>
-                <a id="menu_account_login" class="menu_account_hide" style="display: none"></a>
-            </li>
+      <input id="nav-toggle" type="checkbox" />
+      <div class="logo">
+        <a href="index.html">Toasty<strong>Restaurant</strong></a>
+      </div>
+      <ul class="links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="menu.html">MENU</a></li>
+        <li><a href="about.html">ABOUT US</a></li>
+        <li>
+          <a href="reservation.html">RESERVATION</a>
+        </li>
+        <li><a href="contact.html" class="active">CONTACT</a></li>
+        <li>
+          <a id="menu_login_button" data-toggle="modal" data-target=".login">
+            '<i class="fa fa-sign-in" aria-hidden="true"></i>'
+          </a>
+          <a
+            id="menu_account_login"
+            class="menu_account_hide"
+            style="display: none"
+          ></a>
+        </li>
 
-            <header>
-                <div data-toggle="modal" data-target=".orderCart" class="shopping">
-                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
-                    <span>
-                        <p id="order_number">0</p>
-                    </span>
-                </div>
-            </header>
-        </ul>
-        <label for="nav-toggle" class="icon-burger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </label>
-        <ul></ul>
+        <header>
+          <div data-toggle="modal" data-target=".orderCart" class="shopping">
+            <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+            <span>
+              <p id="order_number">0</p>
+            </span>
+          </div>
+        </header>
+      </ul>
+      <label for="nav-toggle" class="icon-burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </label>
+      <ul></ul>
 
-        <div id="menu_logout">
-            <div id="menu_header22" class="khung p-3" style="
+      <div id="menu_logout">
+        <div
+          id="menu_header22"
+          class="khung p-3"
+          style="
             margin: 0 auto;
             width: 3500px;
             background: orange;
@@ -81,316 +113,592 @@
             margin-left: calc(100vw - 400px);
             margin-top: 55px;
             display: none;
-          ">
-                <p id="hello_user" class="text-white" style="opacity: 0.9"></p>
-                <div id="quanlydon" class="box p-1" style="height: 35px; display: none">
-                    <a href="dashboard.html">
-                        <p>
-                            <i class="fa fa-list-alt text-white mr-3" aria-hidden="true"></i>Manage
-                        </p>
-                    </a>
-                </div>
-                <div class="box p-1" data-toggle="modal" data-target=".bd-example-modal-lg22" style="height: 35px">
-                    <p>
-                        <i class="fa fa-list-alt text-white mr-3" aria-hidden="true"></i>My Orders
-                    </p>
-                </div>
-                <div class="box p-1" data-toggle="modal" data-target=".bd-example-modal-sm33" style="height: 35px">
-                    <p>
-                        <i class="fa fa-key text-white mr-3" aria-hidden="true"></i>Change
-                        Password
-                    </p>
-                </div>
+          "
+        >
+          <p id="hello_user" class="text-white" style="opacity: 0.9"></p>
+          <div
+            id="quanlydon"
+            class="box p-1"
+            style="height: 35px; display: none"
+          >
+            <a href="dashboard.html">
+              <p>
+                <i class="fa fa-list-alt text-white mr-3" aria-hidden="true"></i
+                >Manage
+              </p>
+            </a>
+          </div>
+          <div
+            class="box p-1"
+            data-toggle="modal"
+            data-target=".bd-example-modal-lg22"
+            style="height: 35px"
+          >
+            <p>
+              <i class="fa fa-list-alt text-white mr-3" aria-hidden="true"></i
+              >My Orders
+            </p>
+          </div>
+          <div
+            class="box p-1"
+            data-toggle="modal"
+            data-target=".bd-example-modal-sm33"
+            style="height: 35px"
+          >
+            <p>
+              <i class="fa fa-key text-white mr-3" aria-hidden="true"></i>Change
+              Password
+            </p>
+          </div>
 
-                <div class="box p-1" style="height: 35px">
-                    <p onclick="Logout()">
-                        <i class="fa fa-sign-out text-white mr-3" aria-hidden="true"></i>Logout
-                    </p>
-                </div>
-            </div>
+          <div class="box p-1" style="height: 35px">
+            <p onclick="Logout()">
+              <i class="fa fa-sign-out text-white mr-3" aria-hidden="true"></i
+              >Logout
+            </p>
+          </div>
         </div>
+      </div>
     </nav>
 
     <section class="contact" id="contact">
-        <div class="contact-text">
-            <h2><span>Contact</span> Us</h2>
-            <h4></h4>
-            <p></p>
-            <div class="contact-list">
-                <li><a href="Tel:+"><i class="fa fa-phone" aria-hidden="true"></i> Call</a></li>
-                <li><a href="mailto:"> <i class="fa fa-envelope" aria-hidden="true"></i> Mail</a></li>
-            </div>
-            <div class="contact-icons">
-                <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-official"
-                        aria-hidden="true"></i></a>
-                <a href="https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin-square"
-                        aria-hidden="true"></i></a>
-                <a href="https://wa.me/0" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
-            </div>
+      <div class="contact-text">
+        <h2><span>Contact</span> Us</h2>
+        <h4></h4>
+        <p></p>
+        <div class="contact-list">
+          <li>
+            <a href="Tel:+"
+              ><i class="fa fa-phone" aria-hidden="true"></i> Call</a
+            >
+          </li>
+          <li>
+            <a href="mailto:">
+              <i class="fa fa-envelope" aria-hidden="true"></i> Mail</a
+            >
+          </li>
         </div>
-        <div class="contact-form">
-            <form action="" class="action">
-                <input type="name" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email Address" required>
-                <input type="tel" placeholder="Your Mobile Number" required>
-                <textarea name="" id="" cols="35" rows="5" placeholder="How Can We Be Of Help?" required></textarea>
-                <input type="submit" value="Send Message" class="submit" required>
-            </form>
+        <div class="contact-icons">
+          <a href="https://twitter.com/" target="_blank"
+            ><i class="fa fa-twitter" aria-hidden="true"></i
+          ></a>
+          <a href="https://www.facebook.com/" target="_blank"
+            ><i class="fa fa-facebook-official" aria-hidden="true"></i
+          ></a>
+          <a href="https://www.linkedin.com/" target="_blank"
+            ><i class="fa fa-linkedin-square" aria-hidden="true"></i
+          ></a>
+          <a href="https://wa.me/0" target="_blank"
+            ><i class="fa fa-whatsapp" aria-hidden="true"></i
+          ></a>
         </div>
-
+      </div>
+      <div class="contact-form">
+        <form action="" class="action">
+          <input type="name" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email Address" required />
+          <input type="tel" placeholder="Your Mobile Number" required />
+          <textarea
+            name=""
+            id=""
+            cols="35"
+            rows="5"
+            placeholder="How Can We Be Of Help?"
+            required
+          ></textarea>
+          <input type="submit" value="Send Message" class="submit" required />
+        </form>
+      </div>
     </section>
-    <div class="modal fade bd-example-modal-lg22" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content p-3" style="width: 150%; left: -200px">
-                <p class="font-weight-bold" style="font-size: 110%">My Orders</p>
+    <div
+      class="modal fade bd-example-modal-lg22"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="myLargeModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content p-3" style="width: 150%; left: -200px">
+          <p class="font-weight-bold" style="font-size: 110%">My Orders</p>
 
-                <div data-spy="scroll" data-target="#myScrollspy" data-offset="10" style="
+          <div
+            data-spy="scroll"
+            data-target="#myScrollspy"
+            data-offset="10"
+            style="
               height: 520px;
               overflow-y: scroll;
               padding-top: 5px;
               padding-right: 10px;
-            ">
-                    <table class="table table-borderless">
-                        <thead>
-                            <tr>
-                                <th scope="col" style="width: 20%; font-size: 115%">
-                                    Customer Name
-                                </th>
-                                <th scope="col" style="width: 44%; font-size: 115%" class="text-center">
-                                    Food
-                                </th>
-                                <th scope="col" style="width: 18%; font-size: 115%" class="text-center">
-                                    Total Amount
-                                </th>
-                                <th scope="col" style="width: 18%; font-size: 115%" class="text-center">
-                                    Status
-                                </th>
-                            </tr>
-                        </thead>
+            "
+          >
+            <table class="table table-borderless">
+              <thead>
+                <tr>
+                  <th scope="col" style="width: 20%; font-size: 115%">
+                    Customer Name
+                  </th>
+                  <th
+                    scope="col"
+                    style="width: 44%; font-size: 115%"
+                    class="text-center"
+                  >
+                    Food
+                  </th>
+                  <th
+                    scope="col"
+                    style="width: 18%; font-size: 115%"
+                    class="text-center"
+                  >
+                    Total Amount
+                  </th>
+                  <th
+                    scope="col"
+                    style="width: 18%; font-size: 115%"
+                    class="text-center"
+                  >
+                    Status
+                  </th>
+                </tr>
+              </thead>
 
-                        <tbody id="prinfPaymentUser"></tbody>
-                    </table>
-                </div>
-            </div>
+              <tbody id="prinfPaymentUser"></tbody>
+            </table>
+          </div>
         </div>
+      </div>
     </div>
 
-    <div class="modal fade bd-example-modal-sm33 mt-5" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel33"
-        aria-hidden="true">
-        <div class="modal-dialog modal-sm">
-            <div class="modal-content">
-                <div class="iconpopup" style="margin: 0 auto; width: 27%; height: 100%; margin-top: 20%">
-                    <img id="notick" src="image/logo.png" width="100%" />
-                </div>
+    <div
+      class="modal fade bd-example-modal-sm33 mt-5"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="mySmallModalLabel33"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div
+            class="iconpopup"
+            style="margin: 0 auto; width: 27%; height: 100%; margin-top: 20%"
+          >
+            <img id="notick" src="image/logo.png" width="100%" />
+          </div>
 
-                <div id="changepass" class="iconpopup mt-4" style="margin: 0 auto; width: 80%; margin-bottom: 10%">
-                    <p class="text-center mb-3" style="font-weight: bold; margin-bottom: 2%; font-size: 120%">
-                        Change Password
-                    </p>
-                    <p class="mt-3" style="margin-bottom: 2%">
-                        Enter your current password
-                    </p>
-                    <input type="password" name="pass" id="passcurrent" class="form-control" />
-                    <p class="mt-1" style="margin-bottom: 2%">
-                        Enter your new password
-                    </p>
-                    <input type="password" name="pass" id="passnew" class="form-control" />
-                    <p class="mt-1" style="margin-bottom: 2%">
-                        Confirm your new password
-                    </p>
-                    <input type="password" name="pass" id="passnewrepeat" class="form-control" />
-                    <p id="notification_change_pass" class="mt-4 text-center mb-0" style="font-size: 90%; color: red">
-                    </p>
-                    <button class="btn btn-warning float-right mt-3" onclick="Changepassword()">
-                        Change
-                    </button>
-                </div>
-            </div>
+          <div
+            id="changepass"
+            class="iconpopup mt-4"
+            style="margin: 0 auto; width: 80%; margin-bottom: 10%"
+          >
+            <p
+              class="text-center mb-3"
+              style="font-weight: bold; margin-bottom: 2%; font-size: 120%"
+            >
+              Change Password
+            </p>
+            <p class="mt-3" style="margin-bottom: 2%">
+              Enter your current password
+            </p>
+            <input
+              type="password"
+              name="pass"
+              id="passcurrent"
+              class="form-control"
+            />
+            <p class="mt-1" style="margin-bottom: 2%">
+              Enter your new password
+            </p>
+            <input
+              type="password"
+              name="pass"
+              id="passnew"
+              class="form-control"
+            />
+            <p class="mt-1" style="margin-bottom: 2%">
+              Confirm your new password
+            </p>
+            <input
+              type="password"
+              name="pass"
+              id="passnewrepeat"
+              class="form-control"
+            />
+            <p
+              id="notification_change_pass"
+              class="mt-4 text-center mb-0"
+              style="font-size: 90%; color: red"
+            ></p>
+            <button
+              class="btn btn-warning float-right mt-3"
+              onclick="Changepassword()"
+            >
+              Change
+            </button>
+          </div>
         </div>
+      </div>
     </div>
-    <div class="modal fade login mt-5" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="cart_box" style="width: 100%; margin: auto">
-                    <div class="login_img_box float-left" style="width: 50%; height: 450px; background: pink">
-                        <img src="image/logo.png" width="100%" height="100%" />
-                    </div>
+    <div
+      class="modal fade login mt-5"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="myLargeModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="cart_box" style="width: 100%; margin: auto">
+            <div
+              class="login_img_box float-left"
+              style="width: 50%; height: 450px; background: pink"
+            >
+              <img src="image/logo.png" width="100%" height="100%" />
+            </div>
 
-                    <div id="login_box">
-                        <div class="login_info_box float-right p-5" style="width: 50%; height: 450px">
-                            <p class="text-center font-weight-bold" style="font-size: 140%">
-                                Login
-                            </p>
-                            <label class="font-weight-bold mt-3">Username</label>
-                            <input id="usernameLogin" type="text" class="form-control" aria-describedby="emailHelp"
-                                placeholder="Enter your username" style="outline: none" />
-                            <label class="mt-3 font-weight-bold">Password</label>
-                            <input id="passwordLogin" type="password" class="form-control" aria-describedby="emailHelp"
-                                placeholder="Enter your password" />
-                            <button onclick="Login()" class="btn btn-primary mt-4" style="
+            <div id="login_box">
+              <div
+                class="login_info_box float-right p-5"
+                style="width: 50%; height: 450px"
+              >
+                <p class="text-center font-weight-bold" style="font-size: 140%">
+                  Login
+                </p>
+                <label class="font-weight-bold mt-3">Username</label>
+                <input
+                  id="usernameLogin"
+                  type="text"
+                  class="form-control"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter your username"
+                  style="outline: none"
+                />
+                <label class="mt-3 font-weight-bold">Password</label>
+                <input
+                  id="passwordLogin"
+                  type="password"
+                  class="form-control"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter your password"
+                />
+                <button
+                  onclick="Login()"
+                  class="btn btn-primary mt-4"
+                  style="
                     width: 100%;
                     background: #fb9200;
                     border: 0;
                     outline: none;
-                  ">
-                                Login
-                            </button>
-                            <p id="statusLogin" class="text-center mt-4" style="font-size: 90%; color: red"></p>
-                            <p onclick="move_signup()" class="text-center mt-3" style="font-size: 90%">
-                                Don't have an account? Sign up<strong style="color: #fb9200">
-                                    here</strong>
-                            </p>
-                        </div>
-                    </div>
+                  "
+                >
+                  Login
+                </button>
+                <p
+                  id="statusLogin"
+                  class="text-center mt-4"
+                  style="font-size: 90%; color: red"
+                ></p>
+                <p
+                  onclick="move_signup()"
+                  class="text-center mt-3"
+                  style="font-size: 90%"
+                >
+                  Don't have an account? Sign up<strong style="color: #fb9200">
+                    here</strong
+                  >
+                </p>
+              </div>
+            </div>
 
-                    <div id="signup_box" style="display: none">
-                        <div class="signup_info_box float-right p-4 pl-5 pr-5" style="width: 50%; height: 450px">
-                            <p class="text-center font-weight-bold" style="font-size: 140%">
-                                Sign up
-                            </p>
-                            <label class="font-weight-bold mt-1">Username</label>
-                            <input id="usernameSignup" type="email" class="form-control" aria-describedby="emailHelp"
-                                placeholder="Enter your username" style="outline: none" />
-                            <label class="mt-3 font-weight-bold">Password</label>
-                            <input id="passwordSignup" type="password" class="form-control" aria-describedby="emailHelp"
-                                placeholder="Enter your password" />
-                            <label class="mt-3 font-weight-bold">Confirm Password</label>
-                            <input id="RepasswordSignup" type="password" class="form-control"
-                                aria-describedby="emailHelp" placeholder="Confirm your password" />
-                            <button onclick="Signup()" class="btn btn-primary mt-4" style="
+            <div id="signup_box" style="display: none">
+              <div
+                class="signup_info_box float-right p-4 pl-5 pr-5"
+                style="width: 50%; height: 450px"
+              >
+                <p class="text-center font-weight-bold" style="font-size: 140%">
+                  Sign up
+                </p>
+                <label class="font-weight-bold mt-1">Username</label>
+                <input
+                  id="usernameSignup"
+                  type="email"
+                  class="form-control"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter your username"
+                  style="outline: none"
+                />
+                <label class="mt-3 font-weight-bold">Password</label>
+                <input
+                  id="passwordSignup"
+                  type="password"
+                  class="form-control"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter your password"
+                />
+                <label class="mt-3 font-weight-bold">Confirm Password</label>
+                <input
+                  id="RepasswordSignup"
+                  type="password"
+                  class="form-control"
+                  aria-describedby="emailHelp"
+                  placeholder="Confirm your password"
+                />
+                <button
+                  onclick="Signup()"
+                  class="btn btn-primary mt-4"
+                  style="
                     width: 100%;
                     background: #fb9200;
                     border: 0;
                     outline: none;
-                  ">
-                                Sign up
-                            </button>
-                            <p id="statusSignup" class="text-center mt-3 mb-1" style="font-size: 90%; color: red"></p>
-                            <p onclick="move_login()" class="text-center mt-0" style="font-size: 90%">
-                                Already have an account? Login<strong style="color: #fb9200">
-                                    here</strong>
-                            </p>
-                        </div>
-                    </div>
-                    <div style="clear: both"></div>
-                </div>
+                  "
+                >
+                  Sign up
+                </button>
+                <p
+                  id="statusSignup"
+                  class="text-center mt-3 mb-1"
+                  style="font-size: 90%; color: red"
+                ></p>
+                <p
+                  onclick="move_login()"
+                  class="text-center mt-0"
+                  style="font-size: 90%"
+                >
+                  Already have an account? Login<strong style="color: #fb9200">
+                    here</strong
+                  >
+                </p>
+              </div>
             </div>
+            <div style="clear: both"></div>
+          </div>
         </div>
+      </div>
     </div>
 
-    <div class="modal fade orderCart mt-3" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div id="checkout_form" class="cart_box pl-5 pt-4 shadow-sm mt-3 pb-4"
-                    style="width: 100%; margin: auto">
-                    <p class="ml-2" style="font-size: 130%; font-weight: bold">
-                        Your Cart
-                    </p>
-                    <div data-spy="scroll" data-target="#myScrollspy" data-offset="10" style="
+    <div
+      class="modal fade orderCart mt-3"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="myLargeModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div
+            id="checkout_form"
+            class="cart_box pl-5 pt-4 shadow-sm mt-3 pb-4"
+            style="width: 100%; margin: auto"
+          >
+            <p class="ml-2" style="font-size: 130%; font-weight: bold">
+              Your Cart
+            </p>
+            <div
+              data-spy="scroll"
+              data-target="#myScrollspy"
+              data-offset="10"
+              style="
                 height: 340px;
                 overflow-y: scroll;
                 padding-top: 5px;
                 padding-right: 10px;
-              ">
-                        <table class="table table-borderless">
-                            <thead>
-                                <tr>
-                                    <th scope="col" style="width: 40%; font-size: 115%">
-                                        Product
-                                    </th>
-                                    <th scope="col" style="width: 20%; font-size: 115%" class="text-center">
-                                        Quantity
-                                    </th>
-                                    <th scope="col" style="width: 20%; font-size: 115%" class="text-center">
-                                        Price
-                                    </th>
-                                    <th scope="col" style="width: 20%; font-size: 115%" class="text-center">
-                                        Action
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody id="prinf_order_cart"></tbody>
-                        </table>
-                    </div>
-                    <div class="float-left pl-2" style="width: 30%">
-                        <p class="font-weight-bold mt-2" style="font-size: 115%">Total</p>
-                    </div>
-                    <div class="float-right pr-5" style="width: 30%">
-                        <p id="total_money" class="font-weight-bold float-right mt-2" style="font-size: 115%"></p>
-                    </div>
-                    <div style="clear: both"></div>
-                    <div onclick="checkout()" class="btn mr-5 text-white float-right" style="background: #fb9200">
-                        Checkout
-                    </div>
-                    <div style="clear: both"></div>
-                </div>
-
-                <div id="payment_form" class="p-5" style="width: 100%; height: 400px; display: none">
-                    <div class="choose_box float-left" style="width: 60%">
-                        <p class="font-weight-bold" style="font-size: 130%">Payment</p>
-                        <p class="mb-2 font-weight-bold">Payment method</p>
-                        <div class="payment_choose_box" style="width: 60%">
-                            <div class="float-left pr-1 pb-1" style="width: 50%; height: 80px">
-                                <img onclick="FNB()" class="payment_fnb" src="image/FNB.png" width="100%" height="100%"
-                                    style="border: 1px solid #d7d7d7" />
-                            </div>
-                            <div class="float-right pr-1 pb-1" style="width: 50%; height: 80px">
-                                <img onclick="Absa()" class="payment_absa" src="image/absa.png" width="100%"
-                                    height="100%" style="border: 1px solid #d7d7d7" />
-                            </div>
-                            <div class="float-left pr-1 pb-1" style="width: 50%; height: 80px">
-                                <img onclick="Nedbank()" class="payment_nedbank" src="image/Nedbank.png" width="100%"
-                                    height="100%" style="border: 1px solid #d7d7d7" />
-                            </div>
-                            <div class="float-right pr-1 pb-1" style="width: 50%; height: 80px">
-                                <img onclick="Standard()" class="payment_standard pl-3 pr-3" src="image/Standard.png"
-                                    width="100%" height="100%" style="border: 1px solid #d7d7d7" />
-                            </div>
-                            <div class="float-left pr-1 pb-1" style="width: 50%; height: 80px">
-                                <img onclick="Capitec()" class="payment_capitec" src="image/Capitec.png" width="100%"
-                                    height="100%" style="border: 1px solid #d7d7d7" />
-                            </div>
-                            <div class="float-right pr-1 pb-1" style="width: 50%; height: 80px">
-                                <img onclick="Cash()" class="payment_cash pl-3 pr-3" src="image/images.png" width="100%"
-                                    height="100%" style="border: 1px solid #d7d7d7" />
-                            </div>
-                            <div style="clear: both"></div>
-                        </div>
-                    </div>
-                    <div class="choose_box p-3 float-right" style="width: 40%; height: 100px">
-                        <label for="exampleInputEmail1">Recipient's Name</label>
-                        <input id="name_customer" type="text" class="form-control" id="exampleInputEmail1"
-                            aria-describedby="emailHelp" />
-                        <label for="exampleInputEmail1" class="mt-3">Phone Number</label>
-                        <input id="phone_customer" type="text" class="form-control" id="exampleInputEmail1"
-                            aria-describedby="emailHelp" placeholder="Enter your phone number" />
-                        <label for="exampleInputEmail1" class="mt-3">Address</label>
-                        <input id="address_customer" type="text" class="form-control" id="exampleInputEmail1"
-                            aria-describedby="emailHelp" placeholder="Enter your address" />
-                        <button onclick="payment()" class="btn btn-primary float-right mt-3">
-                            Place Order
-                        </button>
-                    </div>
-                </div>
+              "
+            >
+              <table class="table table-borderless">
+                <thead>
+                  <tr>
+                    <th scope="col" style="width: 40%; font-size: 115%">
+                      Product
+                    </th>
+                    <th
+                      scope="col"
+                      style="width: 20%; font-size: 115%"
+                      class="text-center"
+                    >
+                      Quantity
+                    </th>
+                    <th
+                      scope="col"
+                      style="width: 20%; font-size: 115%"
+                      class="text-center"
+                    >
+                      Price
+                    </th>
+                    <th
+                      scope="col"
+                      style="width: 20%; font-size: 115%"
+                      class="text-center"
+                    >
+                      Action
+                    </th>
+                  </tr>
+                </thead>
+                <tbody id="prinf_order_cart"></tbody>
+              </table>
             </div>
+            <div class="float-left pl-2" style="width: 30%">
+              <p class="font-weight-bold mt-2" style="font-size: 115%">Total</p>
+            </div>
+            <div class="float-right pr-5" style="width: 30%">
+              <p
+                id="total_money"
+                class="font-weight-bold float-right mt-2"
+                style="font-size: 115%"
+              ></p>
+            </div>
+            <div style="clear: both"></div>
+            <div
+              onclick="checkout()"
+              class="btn mr-5 text-white float-right"
+              style="background: #fb9200"
+            >
+              Checkout
+            </div>
+            <div style="clear: both"></div>
+          </div>
+
+          <div
+            id="payment_form"
+            class="p-5"
+            style="width: 100%; height: 400px; display: none"
+          >
+            <div class="choose_box float-left" style="width: 60%">
+              <p class="font-weight-bold" style="font-size: 130%">Payment</p>
+              <p class="mb-2 font-weight-bold">Payment method</p>
+              <div class="payment_choose_box" style="width: 60%">
+                <div
+                  class="float-left pr-1 pb-1"
+                  style="width: 50%; height: 80px"
+                >
+                  <img
+                    onclick="FNB()"
+                    class="payment_fnb"
+                    src="image/FNB.png"
+                    width="100%"
+                    height="100%"
+                    style="border: 1px solid #d7d7d7"
+                  />
+                </div>
+                <div
+                  class="float-right pr-1 pb-1"
+                  style="width: 50%; height: 80px"
+                >
+                  <img
+                    onclick="Absa()"
+                    class="payment_absa"
+                    src="image/absa.png"
+                    width="100%"
+                    height="100%"
+                    style="border: 1px solid #d7d7d7"
+                  />
+                </div>
+                <div
+                  class="float-left pr-1 pb-1"
+                  style="width: 50%; height: 80px"
+                >
+                  <img
+                    onclick="Nedbank()"
+                    class="payment_nedbank"
+                    src="image/Nedbank.png"
+                    width="100%"
+                    height="100%"
+                    style="border: 1px solid #d7d7d7"
+                  />
+                </div>
+                <div
+                  class="float-right pr-1 pb-1"
+                  style="width: 50%; height: 80px"
+                >
+                  <img
+                    onclick="Standard()"
+                    class="payment_standard pl-3 pr-3"
+                    src="image/Standard.png"
+                    width="100%"
+                    height="100%"
+                    style="border: 1px solid #d7d7d7"
+                  />
+                </div>
+                <div
+                  class="float-left pr-1 pb-1"
+                  style="width: 50%; height: 80px"
+                >
+                  <img
+                    onclick="Capitec()"
+                    class="payment_capitec"
+                    src="image/Capitec.png"
+                    width="100%"
+                    height="100%"
+                    style="border: 1px solid #d7d7d7"
+                  />
+                </div>
+                <div
+                  class="float-right pr-1 pb-1"
+                  style="width: 50%; height: 80px"
+                >
+                  <img
+                    onclick="Cash()"
+                    class="payment_cash pl-3 pr-3"
+                    src="image/images.png"
+                    width="100%"
+                    height="100%"
+                    style="border: 1px solid #d7d7d7"
+                  />
+                </div>
+                <div style="clear: both"></div>
+              </div>
+            </div>
+            <div
+              class="choose_box p-3 float-right"
+              style="width: 40%; height: 100px"
+            >
+              <label for="exampleInputEmail1">Recipient's Name</label>
+              <input
+                id="name_customer"
+                type="text"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+              />
+              <label for="exampleInputEmail1" class="mt-3">Phone Number</label>
+              <input
+                id="phone_customer"
+                type="text"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Enter your phone number"
+              />
+              <label for="exampleInputEmail1" class="mt-3">Address</label>
+              <input
+                id="address_customer"
+                type="text"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Enter your address"
+              />
+              <button
+                onclick="payment()"
+                class="btn btn-primary float-right mt-3"
+              >
+                Place Order
+              </button>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
     <section class="end">
-        <div class="last-text">
-            <p>Copyright © 2023. All rights reserved.</p>
-        </div>
+      <div class="last-text">
+        <p>Copyright © 2023. All rights reserved.</p>
+      </div>
 
-        <div class="top">
-            <a href="#"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></a>
-        </div>
+      <div class="top">
+        <a href="#"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></a>
+      </div>
     </section>
     <script src="index.js"></script>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
