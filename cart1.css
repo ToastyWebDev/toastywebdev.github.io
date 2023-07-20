@@ -142,6 +142,7 @@ input.cart_input_quanlity {
   color: #fff;
 }
 
+<<<<<<< HEAD
 ::-webkit-scrollbar:horizontal {
   display: none;
 }
@@ -158,8 +159,22 @@ input.cart_input_quanlity {
 
 ::-webkit-scrollbar-track {
   background-color: #f8fafd;
+=======
+::-webkit-scrollbar {
+    width: 10px;
 }
-
+  ::-webkit-scrollbar-track {
+    background: var(--nav-background-color); 
+}
+  ::-webkit-scrollbar-thumb {
+    background:  #ff7f5097;
+	border-radius: 50px;
+>>>>>>> 15a703c (Further Updates)
+}
+ 
+::-webkit-scrollbar-thumb:hover {
+    background: var(--button-hoverez); 
+  }
 .khung .box {
   padding-left: 10px !important;
 }
