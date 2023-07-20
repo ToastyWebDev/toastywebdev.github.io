@@ -441,3 +441,41 @@ nav.sticky {
   cursor: pointer;
   border-radius: 0;
 }
+<<<<<<< HEAD
+=======
+
+/* container */
+/* #category_navigation button{
+    justify-content: space-between;
+    align-items: center;
+} */
+
+/* menu-edits */
+#list_food_home{
+    padding: 3rem 0 0 0;
+}
+.container-fluid h1{
+    padding: 16rem 10% 1px ;
+  }
+.button{
+    margin: 10px 0 0 10%;
+	border: 0px; 
+  text-align: center;
+	display: inline-block;
+  font-size: 16px;
+  background: var(--button-color);
+  color: var(--text-color);
+	padding: 15px;
+	border-radius: 25px;
+  transition: all .45s ease-out;
+  text-decoration: none;
+  
+}
+.button:hover{
+	background-color: var(--button-hoverez);
+    cursor: pointer;
+    border-radius: 0;
+    text-decoration: none;
+    color: var(--text-color);
+}
+>>>>>>> 15a703c (Further Updates)

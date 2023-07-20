@@ -140,6 +140,11 @@ nav .icon-burger .line {
 	border-radius: 3px;
 	transition: all .3s ease-in-out;
 }
+#menu_login_button:hover,
+.fa:hover{
+  color: var(--button-hoverez);
+  cursor: pointer;
+}
 
 .intro {
   display: flex;
@@ -1156,5 +1161,3 @@ img {
   }
     
     /* End of Reservations */
-
-  
