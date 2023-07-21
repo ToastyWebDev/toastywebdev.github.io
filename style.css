@@ -491,6 +491,11 @@ form textarea {
   position: relative;
   bottom: 0;
   width: 100%;
+  height: 60px;
+  /* position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px; /* Change this value to adjust the height of the footer */
 }
 .last-text p {
   color: #fff;
@@ -1071,7 +1076,7 @@ header .shopping span {
   background-attachment: fixed;
   background-position: center;
   padding-top: 75px;
-  height: 100vh;
+  min-height: 100%;
 }
 span {
   color: var(--text-color);
@@ -1096,6 +1101,7 @@ span {
   font-size: 15px;
   border-radius: 8px;
   margin-bottom: 10px;
+  min-height: 100%;
 }
 .reaservation-form form {
   position: relative;
@@ -1112,9 +1118,22 @@ form textarea {
   border-radius: 8px;
   margin-bottom: 10px;
 }
+.form-control {
+  width: 100%;
+  padding: 14px;
+  color: var(--text-color);
+  border: none;
+  outline: none;
+  font-size: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background: var(--second-bg-color);
+}
 .reaservation-form textarea {
   resize: none;
   height: 240px;
+  background: var(--second-bg-color);
+  border: none;
 }
 .reaservation-form .submit {
   display: inline-block;
@@ -1138,8 +1157,8 @@ form textarea {
 .reservation-container {
   height: 100vh;
 }
-.extra-lower {
+/* .extra-lower {
   padding: 5rem 0 0 0;
-}
+} */
 
 /* End of Reservations */
