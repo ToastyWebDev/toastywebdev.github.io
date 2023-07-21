@@ -296,14 +296,14 @@ if (food === null) {
     },
     {
       id: 13,
-      name: "1/2 Checken",
+      name: "1/2 Chicken",
       price: "110",
       note: "Meal served with medium chips",
       image: "image/half-chicken.png",
     },
     {
       id: 14,
-      name: "Full Checken",
+      name: "Full Chicken",
       price: "150",
       note: "Meal served with large chips",
       image: "image/full-checken.png",
