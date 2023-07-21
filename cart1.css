@@ -93,37 +93,17 @@ input.cart_input_quanlity {
   margin: auto;
   color: #fff;
 }
-
-::-webkit-scrollbar:horizontal {
-  display: none;
-}
-
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-  background-color: #fff;
+  width: 10px;
 }
-
-::-webkit-scrollbar-thumb {
-  background-color: #fff;
-}
-
 ::-webkit-scrollbar-track {
-  background-color: #f8fafd;
+  background: var(--nav-background-color);
 }
-<<<<<<< HEAD
+::-webkit-scrollbar-thumb {
+  background: #ff7f5097;
+  border-radius: 50px;
+}
 
-=======
-  ::-webkit-scrollbar-track {
-    background: var(--nav-background-color); 
-}
-  ::-webkit-scrollbar-thumb {
-    background:  #ff7f5097;
-	border-radius: 50px;
->>>>>>> 15a703c (Further Updates)
-}
-}
->>>>>>> 7d86bf9 (Updates)
 ::-webkit-scrollbar-thumb:hover {
   background: var(--button-hoverez);
 }
