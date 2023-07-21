@@ -317,7 +317,7 @@ if (food === null) {
     },
     {
       id: 16,
-      name: "Pork Ribs & 1/4 Checken",
+      name: "Pork Ribs & 1/4 Chicken",
       price: "260",
       note: "Meal served with medium chips",
       image: "image/pork-ribs-quarter-chicken.webp",
@@ -331,7 +331,7 @@ if (food === null) {
     },
     {
       id: 18,
-      name: "Beef Ribs & 1/4 Checken",
+      name: "Beef Ribs & 1/4 Chicken",
       price: "280",
       note: "Meal served with medium chips",
       image: "image/beef-ribs-quarter-chicken.png",
