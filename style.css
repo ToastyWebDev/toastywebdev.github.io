@@ -25,7 +25,7 @@
 }
 .index {
   max-width: 100%;
-  background-image: url(image/Toasty4.jpg);
+  background-image: url(https://backoffice.vilavitaparc.com/sites/default/files/styles/heroimg/public/2021-01/atlantico-restaurant.jpg?itok=y9QvugOZ);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -154,7 +154,7 @@ nav .icon-burger .line {
 
 .intro h1 {
   font-size: 60px;
-  color: var(--text-color);
+  color: var(--main-color);
   padding: 10px;
 }
 

@@ -59,6 +59,40 @@ $(document).ready(function () {
   });
 });
 
+//Menu Filter Button
+$(document).ready(function () {
+  $(".meals-button").click(function () {
+    $(".meals-button").addClass('active');
+    $(".all-button").removeClass('active');
+    $(".drinks-button").removeClass('active');
+    $(".desserts-button").removeClass('active');
+  });
+});
+$(document).ready(function () {
+  $(".all-button").click(function () {
+    $(".meals-button").removeClass('active');
+    $(".all-button").addClass('active');
+    $(".drinks-button").removeClass('active');
+    $(".desserts-button").removeClass('active');
+  });
+});
+$(document).ready(function () {
+  $(".drinks-button").click(function () {
+    $(".meals-button").removeClass('active');
+    $(".all-button").removeClass('active');
+    $(".drinks-button").addClass('active');
+    $(".desserts-button").removeClass('active');
+  });
+});
+$(document).ready(function () {
+  $(".desserts-button").click(function () {
+    $(".meals-button").removeClass('active');
+    $(".all-button").removeClass('active');
+    $(".drinks-button").removeClass('active');
+    $(".desserts-button").addClass('active');
+  });
+});
+
 window.onscroll = function () {
   myFunction();
 };
@@ -767,9 +801,35 @@ function orderPrinf() {
     }
   }
 }
+// function checkorder(id) {
+//   if (checkLogin == -1) {
+//     alert("Please login");
+//   } else {
+//     for (let i = 0; i < orderFood.length; i++) {
+//       var checkordervalue = 0;
+
+//       if (
+//         id == orderFood[i].id_food &&
+//         checkLogin == orderFood[i].user_id_order
+//       ) {
+//         checkordervalue = 1;
+//         orderFood[i].quanlity_order++;
+
+//         orderFood[i].quanlity_order;
+//         localStorage.setItem("orderFood", JSON.stringify(orderFood));
+//         orderprinf();
+//       }
+//     }
+//     if (checkordervalue == 0) {
+//       orderpush(id);
+//       orderprinf();
+//     }
+//   }
+// }
 function checkorder(id) {
   if (checkLogin == -1) {
-    alert("Please login");
+    // Display the popup
+    document.getElementById("popup-container").style.display = "flex";
   } else {
     for (let i = 0; i < orderFood.length; i++) {
       var checkordervalue = 0;
@@ -792,6 +852,20 @@ function checkorder(id) {
     }
   }
 }
+
+function closePopup() {
+  // Close the popup
+  document.getElementById("popup-container").style.display = "none";
+}
+// Reservation form
+function showReservationForm() {
+    document.getElementById("popup-container2").style.display = "flex";
+}
+
+function hideReservationForm() {
+    document.getElementById("popup-container2").style.display = "none";
+}
+
 
 function orderpush(id) {
   var paymentFood = JSON.parse(localStorage.getItem("paymentFood"));
@@ -1041,3 +1115,86 @@ function onloadAll() {
   listFood();
   // paymentPrinf();
 }
+
+
+
+// Call listFood with the desired category, e.g., 1 for displaying all food items
+    listFood(1);
+    // Function to change the category and display the corresponding food items
+    function changeCategory(category) {
+      
+      listFood(category);
+      // Remove the "active" class from all buttons
+      // const buttons = document.querySelectorAll('.filter-btn');
+      // buttons.forEach(button => button.classList.remove('active'));
+
+      // // Add the "active" class to the clicked button
+      // const clickedButton = document.querySelector(`.filter-btn[data-category="${categoryId}"]`);
+      // clickedButton.classList.add('active');
+    }
+   
+    
+
+    // Function to display food items
+    function listFood(category) {
+      document.getElementById("prinf_food").innerHTML = "";
+      var filteredFood;
+
+      switch (category) {
+        case 1:
+          filteredFood = food;
+          break;
+        case 2:
+          filteredFood = food.filter((item) => item.id >= 11 && item.id <= 21);
+          break;
+        case 3:
+          filteredFood = food.filter(
+            (item) => item.id >= 0 && item.id <= 10
+          );
+          break;
+        case 4:
+          filteredFood = food.filter((item) => item.id > 21);
+          break;
+        default:
+          filteredFood = food;
+      }
+
+      for (let i = 0; i < filteredFood.length; i++) {
+        var prinf = `<div class="col-12 col-sm-6 col-md-4 col-lg-3 p-4">
+                <div class="produre_box bg-white shadow-sm">
+                  <div class="image_box">
+                    <img src="${filteredFood[i].image
+          }" width="100%" height="100%">
+                  </div>
+                  <div class="info_box p-3 bg-white">
+                    <p class="float-left font-weight-bold mb-0" style="font-size: 115%">${filteredFood[i].name
+          }</p>
+                    <div style="clear: both;"></div>
+      
+                    <p style="font-size: 85%;height:auto; padding:3px 0;">${filteredFood[i].note
+          }</p>
+                    <div style="clear: both;"></div>
+                    <p style="font-size: 115%; padding: 1px;">R ${formatPrice(
+            filteredFood[i].price
+          )}</p>
+                    <div class="star_box float-left pt-2">
+                      <img src="icon_star.svg" width="80%">
+                    </div>
+                    <div class="order_box float-right">
+                      <div onclick="checkorder(${filteredFood[i].id
+          })" class="order_button float-right pt-2">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                      </div>
+                    </div>
+                    <div style="clear: both;"></div>
+                  </div>
+                </div>
+              </div>`;
+        document.getElementById("prinf_food").innerHTML += prinf;
+      }
+    }
+
+    // Helper function to format the price
+    function formatPrice(price) {
+      return parseFloat(price).toFixed(2);
+    }
